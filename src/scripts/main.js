@@ -35,11 +35,12 @@ function removeColumn() {
 
 function addRow() {
   const rowCount = table.rows.length;
+  const colCount = table.rows[0].cells.length;
 
   if (rowCount < maxLimit) {
     const newRow = table.insertRow();
 
-    for (let i = 0; i < rowCount; i++) {
+    for (let i = 0; i < colCount; i++) {
       const newCell = newRow.insertCell();
 
       newCell.classList.add('cell');
